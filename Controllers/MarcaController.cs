@@ -17,5 +17,15 @@ namespace WebApplication2.Controllers
 
             return Ok(data);
         }
+
+        [HttpGet]
+        public IHttpActionResult Get(int IdMarca)
+        {
+            TestContext db = new TestContext();
+
+            var data = db.Database.SqlQuery<Marca>("spMarcaQuery {0}", IdMarca).FirstOrDefault();
+
+            return Ok(data);
+        }
     }
 }
