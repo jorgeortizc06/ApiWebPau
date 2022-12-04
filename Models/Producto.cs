@@ -7,5 +7,6 @@
         public int IdMarca { get; set; }
         public string Marca { get; set; }
         public bool Activo { get; set; }
+        public byte[] Imagen { get; set; }
     }
 }
